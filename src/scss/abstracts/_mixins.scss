@@ -1,0 +1,43 @@
+@use "sass:color";
+@use "variables" as *;
+
+// ── Responsive ────────────────────────────
+@mixin responsive($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == "tablette" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == "bureau" {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// ── Flexbox centrage ──────────────────────
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+// ── Bouton de base ────────────────────────
+@mixin bouton-base($bg: $couleur-primaire, $color: $couleur-blanc) {
+  display: inline-block;
+  padding: $espacer-sm $espacer-lg;
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: $radius-petit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($bg, $lightness: -10%);
+  }
+}

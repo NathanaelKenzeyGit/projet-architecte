@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  @include bouton-base();
+
+  &--secondaire {
+    @include bouton-base($couleur-secondaire);
+  }
+
+  &--accent {
+    @include bouton-base($couleur-accent);
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $couleur-primaire;
+    color: $couleur-primaire;
+    padding: $espacer-sm $espacer-lg;
+    border-radius: $radius-petit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $couleur-primaire;
+      color: $couleur-blanc;
+    }
+  }
+}

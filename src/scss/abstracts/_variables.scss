@@ -1,0 +1,22 @@
+// ── Couleurs ──────────────────────────────
+$couleur-primaire: #1e3a5f;
+$couleur-secondaire: #2e75b6;
+$couleur-accent: #e67e22;
+$couleur-texte: #333333;
+$couleur-fond: #f9f9f9;
+$couleur-blanc: #ffffff;
+
+// ── Typographie ───────────────────────────
+$font-principal: "Roboto", sans-serif;
+$taille-base: 16px;
+
+// ── Espacement ────────────────────────────
+$espacer: 8px;
+$espacer-sm: $espacer * 1;
+$espacer-md: $espacer * 2;
+$espacer-lg: $espacer * 3;
+$espacer-xl: $espacer * 4;
+
+// ── Bordures ──────────────────────────────
+$radius-petit: 4px;
+$radius-moyen: 8px;
