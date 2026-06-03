@@ -3,8 +3,8 @@
 @use "abstracts/mixins" as *;
 
 // ── Base ──────────────────────────────────
-// @use 'base/reset';
-// @use 'base/typography';
+@use "base/reset";
+@use "base/typography";
 
 // ── Layout ────────────────────────────────
 // @use 'layout/header';
@@ -12,17 +12,6 @@
 
 // ── Composants ────────────────────────────
 @use "components/buttons";
-// @use 'components/navbar';
 
 // ── Pages ─────────────────────────────────
 // @use 'pages/home';
-
-// ── Test variables ────────────────────────
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: $font-principal;
-  background-color: $couleur-fond;
-  color: $couleur-texte;
-}
