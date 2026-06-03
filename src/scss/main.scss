@@ -1,18 +1,20 @@
-@use "../../node_modules/bootstrap/scss/bootstrap" as bs;
 // ── Abstracts ─────────────────────────────
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 // ── Base ──────────────────────────────────
-@use "base/reset";
-@use "base/typography";
+@import "base/reset";
+@import "base/typography";
 
-// ── Layout ────────────────────────────────
-// @use 'layout/header';
-// @use 'layout/footer';
+// ── Bootstrap ─────────────────────────────
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // ── Composants ────────────────────────────
-@use "components/buttons";
+@import "components/buttons";
+
+// ── Layout ────────────────────────────────
+// @import 'layout/header';
+// @import 'layout/footer';
 
 // ── Pages ─────────────────────────────────
-// @use 'pages/home';
+// @import 'pages/home';

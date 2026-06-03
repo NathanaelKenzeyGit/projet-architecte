@@ -1,33 +1,46 @@
-@use "../abstracts/variables" as *;
+// @use '../abstracts/variables' as *;
 
 body {
   font-family: $font-principal;
   font-size: $taille-base;
   color: $couleur-texte;
+  background-color: $couleur-fond;
   line-height: 1.6;
 }
 
 h1,
 h2,
-h3,
+h3 {
+  font-family: $font-titre;
+  font-weight: 700;
+  color: $couleur-titre;
+  line-height: 1.2;
+}
+
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  color: $couleur-primaire;
+  font-family: $font-principal;
+  font-weight: 600;
+  color: $couleur-titre;
 }
 
 h1 {
-  font-size: 2.5rem;
-}
+  font-size: clamp(2rem, 5vw, 3.5rem);
+} // responsive automatique
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
 }
 
-p {
-  margin-bottom: $espacer-md;
+// Accents typographiques avec Fragment Mono
+.label,
+.tag,
+.caption {
+  font-family: $font-mono;
+  font-size: $taille-petit;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
