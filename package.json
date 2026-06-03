@@ -14,5 +14,8 @@
   "type": "commonjs",
   "devDependencies": {
     "sass": "^1.100.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }
