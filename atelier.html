@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atelier — Atelier Oda</title>
+
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=fragment-mono@400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="dist/css/main.min.css" />
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a class="navbar__logo" href="index.html">Atelier Oda</a>
+                <button class="navbar__burger" id="burger" type="button">
+                    <span class="navbar__burger-barre"></span>
+                    <span class="navbar__burger-barre"></span>
+                    <span class="navbar__burger-barre"></span>
+                </button>
+                <div class="navbar__menu" id="menu">
+                    <ul class="navbar__liste">
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="index.html">Accueil</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="realisations.html">Réalisations</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__lien navbar__lien--actif" href="atelier.html">Atelier</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PAGE ATELIER -->
+        <main class="atelier">
+            <div class="container">
+                <div class="row">
+                    <!-- Colonne gauche — intro -->
+                    <div class="col-12 col-md-5">
+                        <div class="atelier__intro">
+                            <p class="atelier__tagline">Une pratique de l'architecture simple sans être simpliste</p>
+                            <div class="atelier__identite">
+                                <p class="atelier__nom">Olivier Duffé</p>
+                                <p class="atelier__titre-arch">Architecte DPLG</p>
+                            </div>
+                            <div class="atelier__textes">
+                                <p>
+                                    Diplômé de l'ENSA Paris-La Villette en 2006, Olivier Duffé développe depuis près de
+                                    vingt ans une architecture contextuelle, attentive aux usages, aux ressources et à
+                                    la qualité constructive.
+                                </p>
+                                <p>
+                                    Après plusieurs expériences en agence et collaborations indépendantes, il fonde
+                                    l'Atelier ODA en 2024 afin de porter une pratique de l'architecture simple sans être
+                                    simpliste.
+                                </p>
+                                <p>
+                                    L'atelier développe des projets économes en ressources et en foncier, avec une
+                                    attention particulière portée à la maîtrise des chantiers, à la frugalité
+                                    constructive et à la liberté d'usage.
+                                </p>
+                            </div>
+                            <a href="#" class="atelier__btn-pdf">BOOK — PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite — accordéons -->
+                    <div class="col-12 col-md-7">
+                        <div class="accordion atelier__accordeons" id="atelierAccordeon">
+                            <div class="accordion-item atelier__accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button atelier__accordion-btn collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#item1"
+                                        data-bs-parent="#atelierAccordeon"
+                                    >
+                                        <span class="atelier__accordion-num">01</span>
+                                        Le trait
+                                    </button>
+                                </h2>
+                                <div id="item1" class="accordion-collapse collapse">
+                                    <div class="accordion-body atelier__accordion-body">
+                                        <p>Contenu Le trait à remplir.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item atelier__accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button atelier__accordion-btn collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#item2"
+                                        data-bs-parent="#atelierAccordeon"
+                                    >
+                                        <span class="atelier__accordion-num">02</span>
+                                        Le lieu
+                                    </button>
+                                </h2>
+                                <div id="item2" class="accordion-collapse collapse">
+                                    <div class="accordion-body atelier__accordion-body">
+                                        <p>Contenu Le lieu à remplir.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item atelier__accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button atelier__accordion-btn collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#item3"
+                                        data-bs-parent="#atelierAccordeon"
+                                    >
+                                        <span class="atelier__accordion-num">03</span>
+                                        L'usage
+                                    </button>
+                                </h2>
+                                <div id="item3" class="accordion-collapse collapse">
+                                    <div class="accordion-body atelier__accordion-body">
+                                        <p>Contenu L'usage à remplir.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item atelier__accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button atelier__accordion-btn collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#item4"
+                                        data-bs-parent="#atelierAccordeon"
+                                    >
+                                        <span class="atelier__accordion-num">04</span>
+                                        Partenaires
+                                    </button>
+                                </h2>
+                                <div id="item4" class="accordion-collapse collapse">
+                                    <div class="accordion-body atelier__accordion-body">
+                                        <p>Contenu Partenaires à remplir.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item atelier__accordion-item">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button atelier__accordion-btn collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#item5"
+                                        data-bs-parent="#atelierAccordeon"
+                                    >
+                                        <span class="atelier__accordion-num">05</span>
+                                        Maître d'ouvrage
+                                    </button>
+                                </h2>
+                                <div id="item5" class="accordion-collapse collapse">
+                                    <div class="accordion-body atelier__accordion-body">
+                                        <p>Contenu Maître d'ouvrage à remplir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </body>
+</html>

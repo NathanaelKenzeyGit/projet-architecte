@@ -1,0 +1,124 @@
+.atelier {
+    background-color: $couleur-blanc;
+    padding: $espacer-3xl 0;
+
+    // ── Intro gauche ──────────────────────────
+    &__intro {
+        padding-right: $espacer-2xl;
+    }
+
+    &__tagline {
+        font-family: $font-titre;
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        font-weight: 300;
+        color: $couleur-titre;
+        line-height: 1.4;
+        margin-bottom: $espacer-2xl;
+    }
+
+    &__identite {
+        margin-bottom: $espacer-xl;
+    }
+
+    &__nom {
+        font-family: $font-titre;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: $couleur-titre;
+        margin-bottom: 0;
+    }
+
+    &__titre-arch {
+        font-family: $font-mono;
+        font-size: $taille-petit;
+        color: $couleur-texte;
+        letter-spacing: 0.05em;
+        margin-bottom: 0;
+    }
+
+    &__textes {
+        margin-bottom: $espacer-2xl;
+
+        p {
+            font-family: $font-principal;
+            font-size: 0.9rem;
+            color: $couleur-texte;
+            line-height: 1.7;
+            margin-bottom: $espacer-md;
+        }
+    }
+
+    &__btn-pdf {
+        display: inline-block;
+        font-family: $font-mono;
+        font-size: $taille-petit;
+        letter-spacing: 0.1em;
+        color: $couleur-titre;
+        border: 1px solid $couleur-titre;
+        padding: $espacer-sm $espacer-lg;
+        transition: $transition-base;
+
+        &:hover {
+            background-color: $couleur-titre;
+            color: $couleur-blanc;
+        }
+    }
+
+    // ── Accordéons ────────────────────────────
+    &__accordeons {
+        border: none;
+        border-top: 1px solid $couleur-surface;
+    }
+
+    &__accordion-item {
+        border: none;
+        border-bottom: 1px solid $couleur-surface;
+        background-color: transparent;
+    }
+
+    &__accordion-btn {
+        font-family: $font-mono;
+        font-size: $taille-petit;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $couleur-titre;
+        background-color: transparent;
+        padding: $espacer-lg 0;
+        gap: $espacer-md;
+        box-shadow: none !important;
+
+        &:not(.collapsed) {
+            background-color: transparent;
+            color: $couleur-primaire;
+            box-shadow: none;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        // Cacher la flèche Bootstrap
+        &::after {
+            display: none;
+        }
+    }
+
+    &__accordion-num {
+        font-family: $font-mono;
+        font-size: $taille-petit;
+        color: $couleur-texte;
+        margin-right: $espacer-md;
+    }
+
+    &__accordion-body {
+        padding: 0 0 $espacer-lg 0;
+        background-color: transparent;
+
+        p {
+            font-family: $font-principal;
+            font-size: 0.9rem;
+            color: $couleur-texte;
+            line-height: 1.7;
+        }
+    }
+}

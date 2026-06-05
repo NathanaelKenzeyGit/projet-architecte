@@ -1,22 +1,63 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Google Fonts — Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cabinet Architecte</title>
 
-    <!-- Fontshare — Satoshi + Fragment Mono -->
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=fragment-mono@400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body></body>
+        <!-- Google Fonts — Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Fontshare — Satoshi + Fragment Mono -->
+        <link
+            href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=fragment-mono@400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS compilé -->
+        <link rel="stylesheet" href="dist/css/main.min.css" />
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Logo -->
+                <a class="navbar__logo" href="index.html">Atelier Oda</a>
+
+                <!-- Burger mobile -->
+                <button class="navbar__burger" id="burger" type="button">
+                    <span class="navbar__burger-barre"></span>
+                    <span class="navbar__burger-barre"></span>
+                    <span class="navbar__burger-barre"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="navbar__menu" id="menu">
+                    <ul class="navbar__liste">
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="realisations.html">Réalisations</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="atelier.html">Atelier</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__lien" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- CONTENU DE LA PAGE ICI -->
+
+        <!-- Bootstrap JS + burger -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </body>
 </html>

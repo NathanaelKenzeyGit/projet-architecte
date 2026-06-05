@@ -1,0 +1,135 @@
+.navbar {
+    background-color: $couleur-fond;
+    border-bottom: 1px solid $couleur-surface;
+    padding: $espacer-md 0;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $espacer-xl;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__logo {
+        font-family: $font-titre;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: $couleur-titre;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: $transition-base;
+
+        &:hover {
+            color: $couleur-primaire;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        @include responsive("tablette") {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: $couleur-fond;
+            padding: $espacer-md;
+            border-top: 1px solid $couleur-surface;
+
+            &--ouvert {
+                display: flex;
+            }
+        }
+    }
+
+    &__liste {
+        display: flex;
+        align-items: center;
+        gap: $espacer-lg;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @include responsive("tablette") {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $espacer-sm;
+        }
+    }
+
+    &__lien {
+        font-family: $font-principal;
+        font-size: 0.95rem;
+        color: $couleur-texte;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 4px;
+        transition: $transition-base;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: $couleur-primaire;
+            transition: $transition-base;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            color: $couleur-primaire;
+
+            &::after {
+                width: 60%;
+            }
+        }
+
+        &--actif {
+            color: $couleur-primaire;
+
+            &::after {
+                width: 60%;
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: $espacer-sm;
+
+        @include responsive("tablette") {
+            display: flex;
+        }
+    }
+
+    &__burger-barre {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background-color: $couleur-titre;
+        transition: $transition-base;
+
+        .navbar__burger--actif & {
+            &:nth-child(1) {
+                transform: translateY(6.5px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-6.5px) rotate(-45deg);
+            }
+        }
+    }
+}
